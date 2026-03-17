@@ -1,0 +1,49 @@
+{
+  "name": "pdf-mask-designer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop and web packaging for PDF Mask Designer",
+  "author": "Aimi",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist:win": "electron-builder --win portable --x64",
+    "dist:dir": "electron-builder --dir",
+    "dist:mac": "electron-builder --mac dir zip",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.1.4",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.aimi.pdfmaskdesigner",
+    "productName": "PDF Mask Designer",
+    "asar": true,
+    "files": [
+      "desktop/**/*",
+      "renderer/**/*",
+      "scripts/**/*",
+      "requirements-pdf-tools.txt",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dir",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  }
+}

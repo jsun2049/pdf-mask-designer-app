@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "pages": "3-18",
+  "page_range": {
+    "start": 3,
+    "end": 18,
+    "total_pages": 100
+  },
+  "rect_mode": "xyxy",
+  "unit": "pt",
+  "rules": [
+    {
+      "id": "odd",
+      "name": "单页(奇数页)",
+      "apply_to": "odd",
+      "rects": [
+        {
+          "x0": 52.6,
+          "y0": 39.09,
+          "x1": 174.02,
+          "y1": 74.21
+        }
+      ]
+    },
+    {
+      "id": "even",
+      "name": "双页(偶数页)",
+      "apply_to": "even",
+      "rects": [
+        {
+          "x0": 350.19,
+          "y0": 35.97,
+          "x1": 467.81,
+          "y1": 75.17
+        }
+      ]
+    }
+  ]
+}
